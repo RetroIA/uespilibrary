@@ -1,70 +1,157 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../assets/css/home.css">
-  <title>Home</title> <!--Gabriel-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+    <title>Home do Usuário</title>
+
 </head>
 
 <body>
-  <div id="main-container">
 
-    <div id="topo">
-      <div id="logo">
-        <a href="home.html">
-          <img id="logo_uespi" src="../assets/media/images/logo_uespi.png" alt="Logo">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="../assets/media/images/logo01.png" width="40" height="40" class="d-inline-block align-top" alt="">
+            UespiLibrary
         </a>
-      </div>
-      <div id="menu">
-        <a class="botao" href="home.html">LIVROS</a>
-        <a class="botao" href="login.html">LOGIN</a>
-      </div>
-    </div>
-
-    <div id="pesquisa">
-      <div id="barra-busca">
-        <input id="barra-pesquisa" type="text" placeholder="Pesquisar">
-      </div>
-    </div>
-
-    <div id="livros-container">
-
-      <div id="categoria-titulo">
-        <h2 id="titulo-categoria">Categoria</h2>
-        <div class="linha_horizontal"></div>
-      </div>
-
-      <div id="conteudo-livros">
-        <div id="categorias-livros">
-          <ul class="categorias">
-            <li>Educação</li>
-            <li>Política</li>
-            <li>Culinária</li>
-            <li>Português</li>
-            <li>Biologia</li>
-          </ul>
-          <div class="linha_vertical"></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sair</a>
+                </li>
+            </ul>
         </div>
+    </nav>
 
-        <div id="cards-livros">
-          <div class="card-livro">
-
-            <img class="foto" src="../assets/media/images/pern.jpg" alt="Foto do Livro">
-            <div class="info-livros">
-              <h3>TITULO</h3>
-              <p>AUTOR</p>
-              <p>★★★★☆</p>
+    <!-- Conteúdo da Página -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- Perfil do Usuário -->
+                <div class="profile-card">
+                    <div class="card p-4">
+                        <h5 class="mb-3">Bem-vindo, Usuário</h5>
+                        <p>Nome: Samuel Sousa Lustosa</p>
+                        <p>Matrícula: 123456</p>
+                        <p>Curso: Ciência da Computação</p>
+                    </div>
+                </div>
             </div>
-          </div>
 
+            <div class="col-md-1">
+                <div class="vertical-line"></div>
+            </div>
+
+            <div class="col-md-7">
+                <h2 class="mb-4">Seja bem-vindo à sua página inicial!</h2>
+                <hr>
+
+                <!-- Livros emprestados -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://via.placeholder.com/150" alt="Livro 1" class="book-thumbnail">
+                        <p class="book-description">
+                            <strong>Livro 1</strong><br>
+                            Data de Empréstimo: 01/01/2024<br>
+                            Data de Devolução: 15/01/2024<br>
+                            <button type="button" class="btn btn-primary btn-sm mt-2" data-toggle="modal"
+                                data-target="#livro1Modal">Ver Detalhes</button>
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://via.placeholder.com/150" alt="Livro 2" class="book-thumbnail">
+                        <p class="book-description">
+                            <strong>Livro 2</strong><br>
+                            Data de Empréstimo: 05/01/2024<br>
+                            Data de Devolução: 20/01/2024<br>
+                            <button type="button" class="btn btn-primary btn-sm mt-2" data-toggle="modal"
+                                data-target="#livro2Modal">Ver Detalhes</button>
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://via.placeholder.com/150" alt="Livro 3" class="book-thumbnail">
+                        <p class="book-description">
+                            <strong>Livro 3</strong><br>
+                            Data de Empréstimo: 10/01/2024<br>
+                            Data de Devolução: 25/01/2024<br>
+                            <button type="button" class="btn btn-primary btn-sm mt-2" data-toggle="modal"
+                                data-target="#livro3Modal">Ver Detalhes</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-      </div>
     </div>
-    <div id="rodape"></div>
 
+    <div class="modal fade" id="livro1Modal" tabindex="-1" role="dialog" aria-labelledby="livro1ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="livro1ModalLabel">Detalhes do Livro 1</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Descrição do Livro 1...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="livro2Modal" tabindex="-1" role="dialog" aria-labelledby="livro2ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="livro2ModalLabel">Detalhes do Livro 2</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Descrição do Livro 2...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="livro3Modal" tabindex="-1" role="dialog" aria-labelledby="livro3ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="livro3ModalLabel">Detalhes do Livro 3</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Descrição do Livro 3...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

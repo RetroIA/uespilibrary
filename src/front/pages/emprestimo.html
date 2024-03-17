@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/emprestimo.css">
+    <title>Gestão de Empréstimos</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            UespiLibrary
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sair</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Conteúdo da Página -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="loan-list">
+                    <h2>Listagem de Empréstimos Realizados</h2>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Pesquisar...">
+                    </div>
+                    <div class="loan-item">
+                        <span class="user-info">Nome do Usuário: </span> <span class="loan-details">Samuel Sousa Lustosa
+                            (Matrícula: 789012)</span><br>
+                        <span class="loan-details">Data de Empréstimo: 03/02/2024</span><br>
+                        <span class="loan-details">Data de Devolução Prevista: 18/02/2024</span><br>
+                        <span class="loan-details">Livro Emprestado: Introdução à Computação</span>
+                        <button class="btn btn-primary edit-btn" data-toggle="modal" data-target="#editLoanModal"><i
+                                class="bi bi-pencil"></i> Editar</button>
+                        <button class="btn btn-danger delete-btn">Excluir</button>
+                    </div>
+                    <div class="loan-item">
+                        <span class="user-info">Nome do Usuário: </span> <span class="loan-details">xxxxxxxxx
+                            (Matrícula: 789012)</span><br>
+                        <span class="loan-details">Data de Empréstimo: 03/02/2024</span><br>
+                        <span class="loan-details">Data de Devolução Prevista: 18/02/2024</span><br>
+                        <span class="loan-details">Livro Emprestado: Introdução à Computação</span>
+                        <button class="btn btn-primary edit-btn" data-toggle="modal" data-target="#editLoanModal"><i
+                                class="bi bi-pencil"></i> Editar</button>
+                        <button class="btn btn-danger delete-btn">Excluir</button>
+                    </div>
+                    <div class="loan-item">
+                        <span class="user-info">Nome do Usuário: </span> <span class="loan-details">Mxxxxxxxx
+                            (Matrícula: 789012)</span><br>
+                        <span class="loan-details">Data de Empréstimo: 03/02/2024</span><br>
+                        <span class="loan-details">Data de Devolução Prevista: 18/02/2024</span><br>
+                        <span class="loan-details">Livro Emprestado: Introdução à Computação</span>
+                        <button class="btn btn-primary edit-btn" data-toggle="modal" data-target="#editLoanModal"><i
+                                class="bi bi-pencil"></i> Editar</button>
+                        <button class="btn btn-danger delete-btn">Excluir</button>
+                    </div>
+                    <div class="loan-item">
+                        <span class="user-info">Nome do Usuário: </span> <span class="loan-details">xxxxxxxxx
+                            (Matrícula: 789012)</span><br>
+                        <span class="loan-details">Data de Empréstimo: 03/02/2024</span><br>
+                        <span class="loan-details">Data de Devolução Prevista: 18/02/2024</span><br>
+                        <span class="loan-details">Livro Emprestado: Introdução à Computação</span>
+                        <button class="btn btn-primary edit-btn" data-toggle="modal" data-target="#editLoanModal"><i
+                                class="bi bi-pencil"></i> Editar</button>
+                        <button class="btn btn-danger delete-btn">Excluir</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="loan-form">
+                    <h2>Adicionar Novo Empréstimo</h2>
+                    <div class="form-group">
+                        <label for="username">Nome do Usuário:</label>
+                        <input type="text" class="form-control" id="username" placeholder="Digite o nome do usuário">
+                    </div>
+                    <div class="form-group">
+                        <label for="registration">Matrícula:</label>
+                        <input type="text" class="form-control" id="registration"
+                            placeholder="Digite a matrícula do usuário">
+                    </div>
+                    <div class="form-group">
+                        <label for="loanDate">Data de Empréstimo:</label>
+                        <input type="date" class="form-control" id="loanDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="returnDate">Data de Devolução:</label>
+                        <input type="date" class="form-control" id="returnDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="book">Livro Emprestado:</label>
+                        <input type="text" class="form-control" id="book"
+                            placeholder="Digite o nome do livro emprestado">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Adicionar Empréstimo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editLoanModal" tabindex="-1" role="dialog" aria-labelledby="editLoanModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editLoanModalLabel">Editar Empréstimo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="editUsername">Nome do Usuário:</label>
+                            <input type="text" class="form-control" id="editUsername"
+                                placeholder="Digite o nome do usuário">
+                        </div>
+                        <div class="form-group">
+                            <label for="editRegistration">Matrícula:</label>
+                            <input type="text" class="form-control" id="editRegistration"
+                                placeholder="Digite a matrícula do usuário">
+                        </div>
+                        <div class="form-group">
+                            <label for="editLoanDate">Data de Empréstimo:</label>
+                            <input type="date" class="form-control" id="editLoanDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="editReturnDate">Data de Devolução:</label>
+                            <input type="date" class="form-control" id="editReturnDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="editBook">Livro Emprestado:</label>
+                            <input type="text" class="form-control" id="editBook"
+                                placeholder="Digite o nome do livro emprestado">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar Alterações</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

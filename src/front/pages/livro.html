@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/livro.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            UespiLibrary
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sair</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Conteúdo da Página -->
+    <div class="container">
+        <!-- Listagem de Livros -->
+        <div class="row">
+            <div class="col-md-8">
+                <div class="book-list">
+                    <h2>Listagem de Livros Cadastrados</h2>
+                    <div class="book-item">
+                        <span class="book-details">Título: Introdução à Computação</span><br>
+                        <span class="book-details">Autor: John Doe</span><br>
+                        <span class="book-details">Categoria: Computação</span><br>
+                        <span class="book-details">Status de Empréstimo: Disponível</span>
+                        <button class="btn btn-primary edit-btn" data-toggle="modal"
+                            data-target="#editBookModal">Editar</button>
+                        <button class="btn btn-danger delete-btn">Excluir</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="book-form">
+                    <h2>Adicionar Novo Livro</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="title">Título:</label>
+                            <input type="text" class="form-control" id="title" placeholder="Digite o título do livro">
+                        </div>
+                        <div class="form-group">
+                            <label for="author">Autor:</label>
+                            <input type="text" class="form-control" id="author" placeholder="Digite o autor do livro">
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Categoria:</label>
+                            <input type="text" class="form-control" id="category"
+                                placeholder="Digite a categoria do livro">
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status de Empréstimo:</label>
+                            <select class="form-control" id="status">
+                                <option value="disponivel">Disponível</option>
+                                <option value="emprestado">Emprestado</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Adicionar Livro</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editBookModal" tabindex="-1" role="dialog" aria-labelledby="editBookModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editBookModalLabel">Editar Livro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <!-- Formulário de Edição de Livro -->
+                    <form>
+                        <div class="form-group">
+                            <label for="editTitle">Título:</label>
+                            <input type="text" class="form-control" id="editTitle"
+                                placeholder="Digite o título do livro">
+                        </div>
+                        <div class="form-group">
+                            <label for="editAuthor">Autor:</label>
+                            <input type="text" class="form-control" id="editAuthor"
+                                placeholder="Digite o autor do livro">
+                        </div>
+                        <div class="form-group">
+                            <label for="editCategory">Categoria:</label>
+                            <input type="text" class="form-control" id="editCategory"
+                                placeholder="Digite a categoria do livro">
+                        </div>
+                        <div class="form-group">
+                            <label for="editStatus">Status de Empréstimo:</label>
+                            <select class="form-control" id="editStatus">
+                                <option value="disponivel">Disponível</option>
+                                <option value="emprestado">Emprestado</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar Alterações</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

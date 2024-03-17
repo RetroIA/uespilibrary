@@ -1,181 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Bilbo&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oregano:ital@0;1&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  display: flex;
-  font-family: 'Noto Sans', sans-serif;
-  flex-direction: column;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
 }
 
-
-#main-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+.profile-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
-
-/* Css abaixo referente a parte do topo */
-#topo {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  min-height: 100px;
-  align-items: center;
-  background-color: #190482;
-  border-bottom: solid #8E8FFA 3px;
-}
-
-#logo_uespi {
-  width: 100px;
-  height: 100px;
-}
-
-.botao {
-  width: 86px;
-  height: 38px;
-  border-radius: 3mm;
-  display: inline-block; 
-  text-align: center; 
-  line-height: 38px; 
-  text-decoration: none; 
-  color: #fff; 
-  background-color: #007bff; 
+.profile-card .card {
   border: none;
-  cursor: pointer; 
+  border-radius: 10px;
 }
 
+.book-thumbnail {
+  max-width: 100px;
+  height: auto;
+}
 
-/* Css abaixo referente a barra de Pesquisa */
-#pesquisa {
-  display: flex;
-  position: relative;
-  background-color: #7752FE;
-  background-size: cover;
-  background-position: top;
+.book-description {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.modal-content {
+  border-radius: 10px;
+}
+
+.modal-header {
+  background-color: #007bff;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.modal-title {
+  font-size: 24px;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-footer {
   justify-content: center;
-  align-items: center;
-  padding: 20px 0;
+  border-top: none;
 }
 
-#barra-busca {
-  width: 50%;
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
 }
 
-#barra-pesquisa {
-  width: calc(100% - 50px);
-  padding: 10px;
-  border-radius: 20px;
-  border: none;
-  outline: none;
-  font-size: 16px;
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
 }
 
-/* Referente ao container contendo livros e categorias e linhas divisorias */
-#livros-container {
-  display: flex;
-  padding: 2mm;
-  flex-direction: column;
-  background-color: #7752FE;
-  flex-grow: 1;
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
 }
 
-/* Css abaixo referente as categorias e o titulo Categoria */
-#categoria-titulo {
-  margin-left: 15mm;
-  color: white;
+.btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
 }
 
-#titulo-categoria {
-  margin-bottom: 1mm;
+.close {
+  color: #fff;
 }
 
-.linha_horizontal {
-  position: absolute;
-  left: 0;
-  margin-left: 5mm;
-  width: 80%;
-  height: 2px;
-  background-color: #ffffff;
+.close:hover {
+  color: #ccc;
 }
 
-#conteudo-livros {
-  display: flex;
-  flex-grow: 1;
-}
-
-
-#categorias-livros {
-  position: relative;
-  margin-bottom: 20px;
-  color: white;
-  float: left;
-}
-
-.categorias {
-  display: flex;
-  flex-direction: column;
-  margin-top: 5mm;
-  margin-right: 15mm;
-  margin-left: 15mm;
-  list-style-type: none;
-}
-
-.linha_vertical {
-  position: absolute;
-  bottom: 0;
-  left: 100%;
-  width: 2px;
-  background-color: #ffffff;
-  z-index: 1;
-  top: -26px;
-}
-
-
-/* Css abaixo referente aos cards de livros */
-
-#cards-livros {
-  display: flex;
-  width: 305px;
-  height: 156px;
-  margin-top: 3mm;
-  margin-left: 3mm;
-  border-radius: 3mm;
-  padding: 2mm;
-  justify-content: space-between;
-  background: linear-gradient(#8a9dedff, #ab69e0ff);
-  box-shadow: 0px 10px 40px #00000056;
-}
-
-.card-livro {
-  display: flex;
-}
-
-.foto {
-  width: 119px;
-  height: 140px;
-  background-size: cover;
-}
-
-.info-livros {
-  display: flex;
-  color: white;
-  margin-left: 3mm;
-  flex-direction: column;
-}
-
-
-
-/* Css abaixo referente ao rodapé */
-
-#rodape {
-  width: 100%;
-  height: 83px;
-  background-color: #7752FE;
-  border-top: solid #190482 3px;
+.vertical-line {
+  border-left: 1px solid #ccc;
+  height: 100%;
 }
