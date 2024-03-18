@@ -1,0 +1,38 @@
+{
+  "name": "uespilibrary",
+  "version": "1.0.0",
+  "description": "Projeto de um site de biblioteca",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec sucrase-node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RetroIA/uespilibrary.git"
+  },
+  "keywords": [
+    "library"
+  ],
+  "author": "Gabriel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RetroIA/uespilibrary/issues"
+  },
+  "homepage": "https://github.com/RetroIA/uespilibrary#readme",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "crypto": "^1.0.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^8.1.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.9",
+    "yarn": "^1.22.21"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3",
+    "sucrase": "^3.35.0"
+  }
+}
