@@ -37,7 +37,6 @@ class crudUser {
                 nome,
                 email,
                 senhaCadastro: senhaCadastroCriptografada,
-                confirmarSenha,
                 matricula,
                 curso,
             });
