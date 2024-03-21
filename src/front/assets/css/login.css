@@ -54,4 +54,5 @@ body {
     width: 100%;
     bottom: 0;
     left: 0;
+    flex-shrink: 0;
 }
